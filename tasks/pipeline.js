@@ -12,6 +12,10 @@
  */
 
 
+// Custom task for using grunt-browserify
+var browserifyMainFile = '.tmp/public/js/emmination.js';
+
+
 // CSS files to inject in order
 //
 // (if you're using LESS with the built-in default config, you'll want
@@ -37,6 +41,8 @@ var jsFilesToInject = [
 ];
 
 
+
+
 // Client-side HTML templates are injected using the sources below
 // The ordering of these templates shouldn't matter.
 // (uses Grunt-style wildcard/glob/splat expressions)
@@ -49,11 +55,6 @@ var jsFilesToInject = [
 var templateFilesToInject = [
   'templates/**/*.html'
 ];
-
-
-
-
-
 
 
 // Default path for public folder (see documentation for more information)
@@ -85,3 +86,5 @@ module.exports.templateFilesToInject = templateFilesToInject.map(function(tplPat
 });
 
 
+// Browserify main file path
+module.exports.browserifyMainFile = browserifyMainFile;
